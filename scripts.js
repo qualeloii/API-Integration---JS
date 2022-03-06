@@ -11,7 +11,7 @@ function nextPage(){
 
 function previousPage(){
     pageDestinantion -= 20;
-    if (pageDestinantion > 0){
+    if (pageDestinantion >= 0){
         document.getElementById("cardPanel").innerHTML = "";
         getHeroes();
     }
