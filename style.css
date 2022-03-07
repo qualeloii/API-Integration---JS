@@ -1,73 +1,116 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed");
-@import url("https://fonts.googleapis.com/css?family=Raleway|Rozha+One");
-
-body{
-  font-family: 'Roboto Condensed', sans-serif;
-}
-.container-fluid {
-  padding-left: 0px;
-}
-.container2 {
-  max-width: 1240px;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-h1{
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  text-align: center;
-  font-weight: 700;
-}
-.card{
-    width:15rem;
-    margin: 10px 5px;
-    border: none;
-    position: relative;
-}
-#cardPanel{
-    display:inline;
-}
-.shrink img {
-  transition: 1s ease;
-}
-.shrink:hover{
-  -webkit-transform: scale(0.8);
-  -ms-transform: scale(0.8);
-  transform: scale(0.8);
-  transition: 1s ease;
-}
-.text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: rgba(59, 50, 55, 0.7);
-}
-.card:hover .overlay {
-  opacity: 1;
-}
-@media (max-width: 500px) { 
-  .justify-content-between{
-    width: 50%;
-    margin: 0 auto;
+:root {
+    --main-bg-color: #343A40;
+    --marvel-red: #EC1D24;
+    --box-shadow: rgba(29, 35, 35, 0.85);
   }
+
+.container-fluid{
+    padding: 0;
+    background-color: var(--main-bg-color);
 }
+.navbar-dark{
+  padding-right: 0;
+}
+.btn-outline-danger{
+    color: white;
+    border: none;
+}
+.btn-outline-danger:hover{
+    background-color: var(--marvel-red);
+}
+.banner{
+    padding-top: 6px;
+    background: url(https://i.annihil.us/u/prod/marvel/i/mg/8/e0/52bdf830aa094.jpg) no-repeat center center;
+    height: 450px;
+}
+.banner h1{
+    color: white;
+    margin-left: 40px;
+}
+.banner p{
+    color: white;
+    margin-left: 40px;
+}
+.headline{
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.boxShadow{
+    background-color: var(--box-shadow);
+    max-height: 444px;
+    max-width: 600px;
+    transform: matrix(1, 0, -0.19438, 1, 0, 0);
+}
+.justify-content-around{
+    margin-top: 100px;
+}
+.card {
+    position: relative;
+    max-width : 300px;
+    height : 275px;  
+    background-color : #fff;
+    margin : 30px 10px;
+    padding : 20px 15px;
+    
+    display : flex;
+    flex-direction : column;
+    box-shadow : 0 5px 20px rgba(0,0,0,0.5);
+    transition : 0.3s ease-in-out;
+    border-radius : 15px;
+}
+.card:hover {
+    height : 300px;   
+}
+.card .image {
+    position : relative;
+    width : 200px;
+    height : 200px;
+    filter: grayscale(100%);
+
+    top : -40%;
+    left: 0px;
+    box-shadow : 0 5px 20px rgba(0,0,0,0.2);
+    z-index : 1;
+}
+.card .image:hover{
+    filter:none; 
+}
+.card .image img {
+    max-width : 100%;
+    border-radius : 15px;
+}
+.card .content {
+    position : relative;
+    padding-bottom: 10px;
+    color : #111;
+    text-align : center;
+    
+    transition : 0.3s ease-in-out;
+      
+}
+.card:hover .content {
+    margin-top: 5px;
+     visibility : visible;
+     opacity : 1;
+    
+}
+
+  @media (max-width: 765px) { 
+    .card{
+      margin-top: 50px;
+      margin-bottom: 70px;
+    }
+    .boxShadow{
+      margin-top: 20px;
+      transform: matrix(1, 0, 0, 1, 0, 0);
+      max-height: 400px;
+      max-width: 300px;
+    }
+    .headline{
+      padding-top: 120%;
+    }
+  }
+  

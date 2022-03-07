@@ -17,6 +17,10 @@ function previousPage(){
     }
 }
 
+function reset(){
+    pageDestinantion = 0;
+}
+
 async function getHeroes() {
     const ts = '1646266073';
     const pk = 'fc931fd3f9cc72bc322808238637a23a';
