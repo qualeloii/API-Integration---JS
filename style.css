@@ -12,6 +12,7 @@
   padding-right: 0;
 }
 .btn-outline-danger{
+    margin-left: 10px;
     color: white;
     border: none;
 }
@@ -33,15 +34,12 @@
 }
 .headline{
     width: 75%;
-    margin: 0 auto;
-    padding-top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    padding-top: 25%;
 }
 .boxShadow{
     background-color: var(--box-shadow);
-    max-height: 444px;
-    max-width: 600px;
+    height: 440px;
+    width: 500px;
     transform: matrix(1, 0, -0.19438, 1, 0, 0);
 }
 .justify-content-around{
@@ -98,7 +96,7 @@
     
 }
 
-  @media (max-width: 765px) { 
+  @media (max-width: 760px) { 
     .card{
       margin-top: 50px;
       margin-bottom: 70px;
@@ -110,7 +108,13 @@
       max-width: 300px;
     }
     .headline{
-      padding-top: 120%;
+        padding-top: 45px;
+    }
+  }
+
+  @media (max-width: 575px) { 
+    .form-control{
+        width: 152px;
     }
   }
   
